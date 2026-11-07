@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>多益 990 冒險</title>
+<meta name="description" content="60 天從零到多益 990：課表、文法 26 章、閱讀 12 章、原創題庫與 700 單字。">
+<meta name="theme-color" content="#F6F8FC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101217" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="多益990">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Rubik:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+</head>
+<body>
+<header class="top wrap">
+  <div class="top-row">
+    <div class="brand"><svg class="brand-ic" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="8"/><circle cx="11" cy="12" r="3.2"/><circle cx="21" cy="12" r="3.2" class="f"/><circle cx="11" cy="21" r="3.2" class="f"/><circle cx="21" cy="21" r="3.2"/></svg><span class="brand-t">多益 990 冒險</span><span class="eyebrow">TOEIC QUEST · 60 DAYS</span></div>
+    <div class="theme-seg" role="group" aria-label="主題色">
+      <button data-theme-set="light" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>明亮</button>
+      <button data-theme-set="dark" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>深色</button>
+      <button data-theme-set="auto" aria-pressed="true">自動</button>
+    </div>
+  </div>
+</header>
+<div class="hud" id="hud"></div>
+
+<nav class="tabs" aria-label="主選單">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" data-view="quest">今日任務</button>
+    <button class="tab" role="tab" data-view="plan">冒險地圖</button>
+    <button class="tab" role="tab" data-view="grammar">文法 26 章</button>
+    <button class="tab" role="tab" data-view="reading">閱讀 12 章</button>
+    <button class="tab" role="tab" data-view="bank">題庫試煉</button>
+    <button class="tab" role="tab" data-view="vocab">單字圖鑑</button>
+    <button class="tab" role="tab" data-view="strategy">題型攻略</button>
+    <button class="tab" role="tab" data-view="overview">學習方法</button>
+  </div>
+</nav>
+
+<main>
+<section class="view wrap" id="v-quest" hidden><div id="questBody"></div></section>
+<!-- OVERVIEW -->
+<section class="view wrap" id="v-overview" hidden>
+  <div class="sec-head"><div><h2>學習方法：兩個階段，兩個分數</h2><p>第一階段 30 天打到 800，第二階段 30 天衝滿分。課表串起你的 26 章文法書、12 堂閱讀課、700 個核心單字，以及 <b id="bankCountHead">—</b>原創閱讀練習和 Part 5 題庫。每天塗滿五個泡泡：單字、文法、聽力、閱讀、複盤。</p><p>多益滿分 990，聽力與閱讀各 495。800 靠穩定的基本功；990 靠零失誤的細節、同義替換和時間管理。</p></div><button class="btn" data-open-backup>備份／還原進度</button></div>
+  <div class="ov-grid">
+    <div class="panel">
+      <span class="stage-tag">STAGE 1 · DAY 01–30</span>
+      <h3>0 → 800</h3>
+      <div class="score">
+        <div class="s"><div class="big num">430</div><div class="sub">聽力，約答對 80 / 100</div></div>
+        <div class="s"><div class="big num">370</div><div class="sub">閱讀，約答對 72 / 100</div></div>
+      </div>
+      <p class="muted" style="font-size:13.5px;margin-top:12px">每天約 5.5 小時。文法 26 章在第 20 天前上完，閱讀 12 章在第 8–19 天上完，題庫從基礎題開始。</p>
+    </div>
+    <div class="panel">
+      <span class="stage-tag s2">STAGE 2 · DAY 31–60</span>
+      <h3>800 → 990</h3>
+      <div class="score">
+        <div class="s s2"><div class="big num">495</div><div class="sub">聽力，通常只容許錯 3–5 題</div></div>
+        <div class="s s2"><div class="big num">495</div><div class="sub">閱讀，通常只容許錯 1–3 題</div></div>
+      </div>
+      <p class="muted" style="font-size:13.5px;margin-top:12px">每天約 6 小時。990 進階文法、多篇整合閱讀、200 個進階字與同義替換，最後三週以模考循環為主。</p>
+    </div>
+  </div>
+  <p class="note">實話：容許錯題數會依每回難度浮動，上面只是方向。60 天到 990 需要每天不中斷，且多數人要再加一輪模考。若第 30 天模考還不到 700，先把第一階段再跑一次，再進第二階段。</p>
+
+  <div class="ov-grid" style="margin-top:18px">
+    <div class="panel">
+      <h3>每日時間配置</h3>
+      <div class="blk"><div class="min">60′</div><div><b>單字</b><span>當天新主題＋間隔複習（前 1、3、6 天）</span></div></div>
+      <div class="blk"><div class="min">75′</div><div><b>文法／閱讀課</b><span>讀文法書章節或閱讀 12 章 → 本站考點 → 題庫驗收</span></div></div>
+      <div class="blk"><div class="min">90′</div><div><b>聽力</b><span>題型練習 30′ ＋ 精聽聽寫 30′ ＋ 跟讀 30′</span></div></div>
+      <div class="blk"><div class="min">75′</div><div><b>閱讀</b><span>課表上的「今日練習」題組，計時完成</span></div></div>
+      <div class="blk"><div class="min">30′</div><div><b>複盤</b><span>錯題本：錯因＋同類規則，隔天先重做</span></div></div>
+    </div>
+    <div class="panel">
+      <h3>題庫怎麼用</h3>
+      <ol class="steps">
+        <li><span><b>照課表做</b>：每張日卡的「今日練習」標籤直接打開對應題組。</span></li>
+        <li><span><b>先計時再看解析</b>：Part 7 單篇每題 1 分鐘、多篇一組 5 分鐘。</span></li>
+        <li><span><b>錯了就收進錯題本</b>：題庫會記住你的作答，用「做錯」篩選一鍵重做。</span></li>
+        <li><span><b>第二階段</b>：990 等級題目（藍標）要做到全對，錯一題就回去讀對應的文法或閱讀章節。</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="phases" id="phaseCards"></div>
+
+  <div class="ov-grid" style="margin-top:18px">
+    <div class="panel">
+      <h3>聽力精聽五步驟</h3>
+      <ol class="steps">
+        <li><span><b>盲聽</b>：不看稿聽一遍，作答。</span></li>
+        <li><span><b>聽寫</b>：逐句暫停，寫下聽到的每個字。</span></li>
+        <li><span><b>對稿</b>：圈出沒聽到的地方，多半是連音、弱讀或生字。</span></li>
+        <li><span><b>跟讀</b>：看稿跟唸 3 遍，再不看稿影子跟讀。</span></li>
+        <li><span><b>再盲聽</b>：每個字都聽清楚才換下一段。第二階段改用 1.25 倍速。</span></li>
+      </ol>
+    </div>
+    <div class="panel">
+      <h3>錯題本格式</h3>
+      <div class="scroll-x"><table class="errlog">
+        <tr><th>題目</th><th>我選</th><th>正解</th><th>錯因</th><th>同類規則</th></tr>
+        <tr><td>Please submit the form ___ Friday.</td><td>until</td><td>by</td><td>文法</td><td>by＝期限；until＝持續到</td></tr>
+        <tr><td>P7：What is suggested about Ms. Ito?</td><td>原字照抄的選項</td><td>同義替換的選項</td><td>990 陷阱</td><td>原字照抄常是陷阱</td></tr>
+      </table></div>
+      <p class="muted" style="font-size:13px;margin-top:10px">錯因分五類：單字、文法、聽不出來、時間不夠、990 陷阱（會但錯）。第二階段只需專注最後一類。</p>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section class="view wrap" id="v-plan" hidden>
+  <div class="sec-head">
+    <div><h2>冒險地圖：8 個世界、60 個關卡</h2><p>每一天是一個關卡，5 項任務全部完成就能開寶箱。皇冠標記的是首領戰（模考日）。藍色標籤是當天的練習題，點一下直接開戰。</p></div>
+    <div class="plan-tools">
+      <label for="startDate">開始日期 <input type="date" id="startDate"></label>
+      <button class="btn" id="jumpToday">跳到今天</button>
+      <button class="btn danger" id="resetBtn">重設課表進度</button>
+    </div>
+  </div>
+  <div class="sheet-strip" aria-label="60 天答案卡進度">
+    <div class="lbl"><span>WORLD MAP · DAY 01–60</span><span id="stripStat" class="num">0 / 60 天完成</span></div>
+    <div class="bubbles" id="strip"></div>
+    <div class="legend"><span><i></i>第一階段 0 → 800</span><span><i class="s2"></i>第二階段 800 → 990</span><span>實心 = 已通關</span></div>
+  </div>
+  <div class="prog"><div class="bar"><i id="progBar"></i></div><span class="num" id="progTxt" style="font-size:13px">0%</span></div>
+  <div id="planBody"></div>
+</section>
+
+<!-- GRAMMAR -->
+<section class="view wrap" id="v-grammar" hidden>
+  <div class="sec-head">
+    <div><div class="course-seg seg" role="group" aria-label="課程"><button class="tab" data-view="grammar">文法 26 章</button><button class="tab" data-view="reading">閱讀 12 章</button></div><h2>文法 26 章：多益怎麼考</h2><p>對應你的文法書章節。書講觀念，這裡放 Part 5、6 的必考點、陷阱、990 進階點，每章連到題庫的 4 題練習。</p></div>
+    <div class="g-tools"><button class="btn" id="gOpenAll">全部展開</button><button class="btn" id="gCloseAll">全部收合</button></div>
+  </div>
+  <div class="newbie">
+    <div class="nb-head">
+      <div><h3>新手先讀：句子是由「零件」組成的</h3><p>看不懂文法書，多半是卡在專有名詞。先認識下面五種零件，之後每章都會用同樣的顏色標出來。內文中有藍色虛線的詞，點一下就會跳出白話解釋。</p></div>
+      <button class="btn" id="nbToggle" aria-pressed="true">新手模式：開</button>
+    </div>
+    <div class="roles" id="nbDemo"></div>
+    <div class="role-key">
+      <div><b style="background:var(--blue-soft);color:var(--blue)">主詞 S</b><span>句子的主角：誰在做這件事</span></div>
+      <div><b style="background:var(--accent-soft);color:var(--accent)">動詞 V</b><span>主角做的動作或狀態，每句必有</span></div>
+      <div><b style="background:var(--ok-soft);color:var(--ok)">受詞 O</b><span>動作的對象：做了「什麼」</span></div>
+      <div><b style="background:var(--warn-soft);color:var(--warn)">補語 C</b><span>說明主角「是什麼、怎麼樣」</span></div>
+      <div><b style="background:var(--paper);color:var(--muted)">修飾 M</b><span>補充時間、地點、方式的說明</span></div>
+    </div>
+    <details class="gloss" id="gloss">
+      <summary><span>術語小辭典：文法書常見的 <span id="glossN">60</span> 個專有名詞</span><span class="muted" style="font-weight:500;font-size:13px">點開</span></summary>
+      <div class="gloss-body"><input type="search" id="glossQ" placeholder="搜尋術語，例如 受詞、p.p.、子句…" aria-label="搜尋術語" style="width:100%"><div class="gloss-grid" id="glossGrid"></div></div>
+    </details>
+  </div>
+  <div class="flow"><span class="step">1 看選項</span><i>→</i><span class="step">字根相同＝詞性題，只看空格前後</span><i>→</i><span class="step">動詞不同形＝找主詞與時間標記</span><i>→</i><span class="step">意思不同＝看搭配與上下文</span></div>
+  <div class="glist" id="glist"></div>
+</section>
+
+<!-- READING -->
+<section class="view wrap" id="v-reading" hidden>
+  <div class="sec-head">
+    <div><div class="course-seg seg" role="group" aria-label="課程"><button class="tab" data-view="grammar">文法 26 章</button><button class="tab" data-view="reading">閱讀 12 章</button></div><h2>閱讀 12 章：Part 6、7 題型全解</h2><p>依多益閱讀的真實出題範疇分章：每章列出考題問法、解題步驟、陷阱，並連到題庫裡同題型的練習。</p></div>
+    <div class="g-tools"><button class="btn" id="rOpenAll">全部展開</button><button class="btn" id="rCloseAll">全部收合</button></div>
+  </div>
+  <div class="glist" id="rlist"></div>
+</section>
+
+<!-- BANK -->
+<section class="view wrap" id="v-bank" hidden>
+  <div class="sec-head">
+    <div><h2>題庫試煉場</h2><p id="bankLede">全部為原創題，題型與難度依多益閱讀測驗設計。綠標基礎、橘標 800、藍標 990。作答紀錄存在這台裝置的瀏覽器。</p></div>
+  </div>
+  <div class="tiles" id="tiles"></div>
+  <div class="b-tools">
+    <select id="bLv" aria-label="難度"><option value="all">全部難度</option><option value="1">基礎（600）</option><option value="2">800</option><option value="3">990</option></select>
+    <select id="bType" aria-label="題型"></select>
+    <select id="bCh" aria-label="文法章節"></select>
+    <div class="seg" role="group" aria-label="作答狀態">
+      <button data-bs="all" aria-pressed="true">全部</button>
+      <button data-bs="todo" aria-pressed="false">未做</button>
+      <button data-bs="wrong" aria-pressed="false">做錯</button>
+    </div>
+  </div>
+  <div class="b-active" id="bActive" hidden></div>
+  <div id="bankBody"></div>
+</section>
+
+<!-- VOCAB -->
+<section class="view wrap" id="v-vocab" hidden>
+  <div class="sec-head">
+    <div><h2>單字圖鑑：核心 500 ＋ 990 進階 200</h2><p>核心 500 依多益 20 個情境分組（第 1–20 天）；990 進階 200 附「多益同義替換」，第 31–40 天學。點喇叭聽發音，打勾代表已會。</p></div>
+  </div>
+  <div class="v-tools">
+    <input type="search" id="vq" placeholder="搜尋英文、中文或同義字…" aria-label="搜尋單字">
+    <select id="vt" aria-label="主題"></select>
+    <div class="seg" role="group" aria-label="篩選">
+      <button data-vf="all" aria-pressed="true">全部</button>
+      <button data-vf="todo" aria-pressed="false">不熟</button>
+      <button data-vf="known" aria-pressed="false">已會</button>
+    </div>
+    <div class="seg" role="group" aria-label="自我測驗">
+      <button data-hide="zh" aria-pressed="false">遮中文</button>
+      <button data-hide="en" aria-pressed="false">遮英文</button>
+    </div>
+    <button class="btn" id="fcToggle" aria-pressed="false">字卡模式</button>
+  </div>
+  <div class="fc" id="fc" hidden></div>
+  <div class="vcount num" id="vcount"></div>
+  <div class="vlist" id="vlist"></div>
+</section>
+
+<!-- STRATEGY -->
+<section class="view wrap" id="v-strategy" hidden>
+  <div class="sec-head"><div><h2>七大題型攻略</h2><p>聽力 45 分鐘、閱讀 75 分鐘，共 200 題。每個題型都附 800 的基本功與 990 的關鍵差異。</p></div></div>
+  <div class="panel" style="margin-bottom:18px">
+    <h3>閱讀 75 分鐘時間分配</h3>
+    <p class="muted" style="font-size:13px">800 目標</p>
+    <div class="timeline" role="img" aria-label="800 目標：Part 5 十分鐘、Part 6 八分鐘、Part 7 五十五分鐘、檢查兩分鐘">
+      <div style="flex:10;background:var(--accent)">P5 10′</div><div style="flex:8;background:var(--warn)">P6 8′</div><div style="flex:55;background:var(--graphite);color:var(--on-graphite)">Part 7 · 55′</div><div style="flex:2;background:var(--muted)"></div>
+    </div>
+    <p class="muted" style="font-size:13px;margin-top:12px">990 目標</p>
+    <div class="timeline" role="img" aria-label="990 目標：Part 5 八分鐘、Part 6 六分鐘、Part 7 五十六分鐘、檢查五分鐘">
+      <div style="flex:8;background:var(--accent)">P5 8′</div><div style="flex:6;background:var(--warn)">P6 6′</div><div style="flex:56;background:var(--blue)">Part 7 · 56′</div><div style="flex:5;background:var(--ok)">檢查 5′</div>
+    </div>
+    <div class="tl-legend"><span><i style="background:var(--accent)"></i>Part 5：30 題</span><span><i style="background:var(--warn)"></i>Part 6：16 題</span><span><i style="background:var(--blue)"></i>Part 7：54 題</span><span><i style="background:var(--ok)"></i>回頭檢查標記題</span></div>
+  </div>
+  <div class="parts" id="parts"></div>
+</section>
+</main>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="levelup" id="levelUp" hidden></div>
+<div class="termpop" id="termPop" role="dialog" aria-live="polite" hidden></div>
+<footer class="wrap">進度、作答紀錄、已會單字、開始日期與主題色存在這台裝置上；換手機或電腦時，用「更多 › 備份與還原」帶過去。題庫全部為原創練習題，非 ETS 官方試題；第 1、13、21–29、31、45–57 天的完整模考請搭配 ETS 官方試題本。</footer>
+
+<nav class="tabbar" aria-label="主選單（手機）">
+  <button class="tab" data-view="quest" role="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21V3.5"/><path d="M6 4.5h12l-3 4.25 3 4.25H6"/></svg>任務</button>
+  <button class="tab" data-view="plan" role="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5 8.5 4l7 3L21 4.5v13L15.5 20l-7-3L3 19.5z"/><path d="M8.5 4v13M15.5 7v13"/></svg>地圖</button>
+  <button class="tab" data-view="grammar" data-also="reading" role="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h10.5a3.5 3.5 0 0 1 3.5 3.5v11.5H8.5A3.5 3.5 0 0 1 5 16z"/><path d="M5 16a3.5 3.5 0 0 1 3.5-3.5H19"/></svg>課程</button>
+  <button class="tab" data-view="bank" role="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 4.5 5 5L9 20H4v-5z"/><path d="m12.5 6.5 5 5"/></svg>試煉</button>
+  <button class="tab" data-view="vocab" role="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="13" height="14" rx="2"/><path d="M7.5 3.5h11a2 2 0 0 1 2 2v12"/><path d="M7 11h6M7 14.5h4"/></svg>單字</button>
+  <button class="tb-more" data-open-more aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18.5" cy="12" r="1.6"/></svg>更多</button>
+</nav>
+<div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+<div class="sheet" id="moreSheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+  <div class="grab"></div>
+  <div class="sheet-h"><h3 id="sheetTitle">更多</h3><button class="btn" id="sheetClose">完成</button></div>
+  <div class="sheet-sec"><h4>頁面</h4>
+    <div class="sheet-list">
+      <button class="tab" data-view="reading">閱讀 12 章</button>
+      <button class="tab" data-view="strategy">七大題型攻略</button>
+      <button class="tab" data-view="overview">學習方法與分數目標</button>
+    </div>
+  </div>
+  <div class="sheet-sec"><h4>主題色</h4>
+    <div class="theme-seg" role="group" aria-label="主題色">
+      <button data-theme-set="light" aria-pressed="false">明亮</button>
+      <button data-theme-set="dark" aria-pressed="false">深色</button>
+      <button data-theme-set="auto" aria-pressed="true">自動</button>
+    </div>
+  </div>
+  <div class="sheet-sec"><h4>遊戲設定</h4>
+    <div class="sheet-list"><button class="row" id="soundToggle" aria-pressed="true">音效<span>開</span></button></div>
+  </div>
+  <div class="sheet-sec" id="backupSec"><h4>備份與還原</h4>
+    <div class="backup">
+      <p class="hint">進度存在這台裝置上。換手機、換電腦，或從網頁版換到 App 版時，先在舊裝置產生備份，再到新裝置還原。</p>
+      <div class="row2"><button class="btn primary" id="backupCopy">複製備份碼</button><button class="btn" id="backupDownload">下載備份檔</button></div>
+      <label for="backupText" class="hint">在新裝置貼上備份碼，或選擇備份檔：</label>
+      <textarea id="backupText" placeholder="貼上備份碼…" spellcheck="false" autocomplete="off"></textarea>
+      <div class="row2"><button class="btn" id="backupRestore">從備份碼還原</button><span class="btn file-btn">選擇備份檔<input type="file" id="backupFile" accept="application/json,.json,text/plain"></span></div>
+      <p class="msg" id="backupMsg" role="status"></p>
+    </div>
+  </div>
+  <p class="app-ver" id="appVer"></p>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

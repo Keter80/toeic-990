@@ -1,0 +1,18 @@
+{
+	"appId": "com.toeic990.app",
+	"appName": "多益990",
+	"webDir": "dist",
+	"ios": {
+		"contentInset": "never",
+		"backgroundColor": "#F6F8FCFF"
+	},
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0
+		}
+	},
+	"packageClassList": [
+		"HapticsPlugin",
+		"PreferencesPlugin"
+	]
+}
